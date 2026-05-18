@@ -28,7 +28,7 @@ const CanvasSection = () => {
   }, []);
 
   return (
-    <div className="w-full h-screen fixed top-0 left-0 z-20 pointer-events-none">
+    <div className="w-full h-svh fixed top-0 left-0 z-20 pointer-events-none">
       <Canvas
         className="w-full h-full "
         eventSource={eventSource}
