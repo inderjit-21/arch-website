@@ -5,8 +5,9 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
 import { useTexture } from "@react-three/drei";
 import ProjectData from "./ProjectsData";
-import VertexShader from "@/components/shaders/VertexShader.glsl";
-import FragmentShader from "@/components/shaders/FragmentShader.glsl";
+// import VertexShader from "@/components/shaders/project/VertexShader.glsl";
+// import FragmentShader from "@/components/shaders/project/FragmentShader.glsl";
+import {FragmentShader, VertexShader} from "@/components/shaders/project/WaterEffectShader.jsx"
 
 const MeshItem = ({ domElement, index, image }) => {
   const meshRef = useRef();
