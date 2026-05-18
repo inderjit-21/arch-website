@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+body {
+  position: relative;
+  font-family: Helvetica;
+}
+
+.BgColorMain{
+  background-color: #F2F3EE;
+}
+.BgColorSec{
+  background-color: #3D3E39;
+}
+
+.TextColorMain{
+  color: #3D3E39;
+}

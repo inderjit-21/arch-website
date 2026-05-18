@@ -1,0 +1,67 @@
+const ProjectData =[
+    {
+        id:'01',
+        OuterImg:`/images/project_images/img1.webp`,
+        Name:'Nova Studio',
+        Shape:'aspect-square',
+        Project:[]
+    },
+    {
+        id:'02',
+        OuterImg:`/images/project_images/img2.webp`,
+        Name:'Velora Agency',
+        Shape:'aspect-[4/3]',
+        Project:[]
+    },
+    {
+        id:'03',
+        OuterImg:`/images/project_images/img3.webp`,
+        Name:'Aether Labs',
+        Shape:'aspect-square',
+        Project:[]
+    },
+    {
+        id:'04',
+        OuterImg:`/images/project_images/img4.webp`,
+        Name:'Lunex Motion',
+        Shape:'aspect-[4/3]',
+        Project:[]
+    },
+    {
+        id:'05',
+        OuterImg:`/images/project_images/img5.webp`,
+        Name:'Obsidian Works',
+        Shape:'aspect-square',
+        Project:[]
+    },
+    {
+        id:'06',
+        OuterImg:`/images/project_images/img6.webp`,
+        Name:'Pixel Drift',
+        Shape:'aspect-[4/3]',
+        Project:[]
+    },
+    {
+        id:'07',
+        OuterImg:`/images/project_images/img7.webp`,
+        Name:'Neuro Space',
+        Shape:'aspect-square',
+        Project:[]
+    },
+    {
+        id:'08',
+        OuterImg:`/images/project_images/img8.webp`,
+        Name:'Zenith Creative',
+        Shape:'aspect-[4/3]',
+        Project:[]
+    },
+    {
+        id:'09',
+        OuterImg:`/images/project_images/img9.webp`,
+        Name:'Mirage Digital',
+        Shape:'aspect-square',
+        Project:[]
+    },
+]
+
+export default ProjectData
