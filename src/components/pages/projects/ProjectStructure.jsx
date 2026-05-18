@@ -23,6 +23,7 @@ const ProjectStructure = () => {
           end: "bottom bottom",
           scrub: true,
           //   markers: true,
+          invalidateOnRefresh: true,
         },
       });
       if (window.innerWidth < 780) {

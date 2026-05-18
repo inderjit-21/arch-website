@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 body {
-  width: 100vw;
-  height: 100svh;
+  overflow-x: hidden;
+  width: 100%;
   position: relative;
   font-family: Helvetica;
 }
 
-.BgColorMain{
-  background-color: #F2F3EE;
+.BgColorMain {
+  background-color: #f2f3ee;
 }
-.BgColorSec{
-  background-color: #3D3E39;
+.BgColorSec {
+  background-color: #3d3e39;
 }
 
-.TextColorMain{
-  color: #3D3E39;
+.TextColorMain {
+  color: #3d3e39;
 }
