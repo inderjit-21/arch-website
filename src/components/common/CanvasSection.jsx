@@ -9,7 +9,9 @@ const CanvasSection = () => {
   const Distance = 400;
   const [Fov, SetFov] = useState(75);
   const [eventSource, setEventSource] = useState(null);
-  const PageURl = usePathname()
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  const PageURl = usePathname();
 
   useEffect(() => {
     setEventSource(document.body);
@@ -19,13 +21,23 @@ const CanvasSection = () => {
       SetFov(newFov);
     };
 
+    const handleScreen = () => {
+      setIsDesktop(window.innerWidth >= 1024); // lg breakpoint
+    };
+
     CalculateFov();
+    handleScreen();
 
     window.addEventListener("resize", CalculateFov);
+    window.addEventListener("resize", handleScreen);
     return () => {
       window.removeEventListener("resize", CalculateFov);
+      window.removeEventListener("resize", handleScreen);
     };
   }, []);
+
+  // Hide canvas completely on mobile & tablet
+  if (!isDesktop) return null;
 
   return (
     <div className="w-full h-svh fixed top-0 left-0 z-20 pointer-events-none">
@@ -38,7 +50,6 @@ const CanvasSection = () => {
 
         {/* PROJECTS */}
         {PageURl === "/projects" && <ProjectScene />}
-        
       </Canvas>
     </div>
   );

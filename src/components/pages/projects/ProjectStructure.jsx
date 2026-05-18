@@ -4,6 +4,7 @@ import ProjectData from "./ProjectsData";
 import { HiArrowTurnDownLeft } from "react-icons/hi2";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 
 const ProjectStructure = () => {
@@ -54,21 +55,23 @@ const ProjectStructure = () => {
         "a1",
       );
 
-      gsap.to(".ProjectTextContName", {
-        opacity: 1,
-        delay: 2.5,
-        duration: 1,
-        ease: "none",
-      });
-      gsap.to(".ProjectTitleFlow", {
-        delay: 2.5,
-        translateY: "0%",
-        stagger: {
-          each: 0.1, // one by one delay
-        },
-        duration: 1,
-        ease: "power4.inOut",
-      });
+      if (window.innerWidth >= 1024) {
+        gsap.to(".ProjectTextContName", {
+          opacity: 1,
+          delay: 2.5,
+          duration: 1,
+          ease: "none",
+        });
+        gsap.to(".ProjectTitleFlow", {
+          delay: 2.5,
+          translateY: "0%",
+          stagger: {
+            each: 0.1, // one by one delay
+          },
+          duration: 1,
+          ease: "power4.inOut",
+        });
+      } 
     };
 
     calculateAndAnimate();
@@ -80,14 +83,19 @@ const ProjectStructure = () => {
     };
 
     window.addEventListener("resize", handleResize);
+
     return () => {
       window.removeEventListener("resize", handleResize);
+
       ScrollTrigger.getAll().forEach((t) => t.kill());
     };
   }, []);
 
   return (
-    <div ref={ProjectMainCont} className={`w-full h-[600svh] relative BgColorMain  `}>
+    <div
+      ref={ProjectMainCont}
+      className={`w-full h-[400svh] relative BgColorMain  `}
+    >
       <div className="w-full h-svh sticky top-0 left-0 overflow-hidden  p-5 flex flex-col justify-between  sm:p-10">
         <div
           ref={ProjectWrapContainer}
@@ -96,9 +104,15 @@ const ProjectStructure = () => {
           {ProjectData.map((data, index) => (
             <div key={index} className="w-fit h-fit">
               <div
-                className={` w-[90vw] md:w-[45vw] lg:w-[25vw] shrink-0 ProjectImgCont ${data.Shape}`}
-              ></div>
-              <div className=" ProjectTextContName opacity-0 w-[90vw] max-sm:text-[1.3rem] TextColorMain  md:w-[45vw] lg:w-[25vw] flex gap-5 justify-between tracking-tight items-center h-fit pt-[4vw] sm:pt-[1vw]">
+                className={` w-[90vw]  md:w-[45vw] lg:w-[25vw] shrink-0 overflow-hidden ProjectImgCont ${data.Shape}`}
+              >
+                <img
+                  src={data.OuterImg}
+                  alt="img"
+                  className=" w-full lg:hidden h-full object-cover object-center"
+                />
+              </div>
+              <div className=" ProjectTextContName lg:opacity-0 w-[90vw] max-sm:text-[1.3rem] TextColorMain  md:w-[45vw] lg:w-[25vw] flex gap-5 justify-between tracking-tight items-center h-fit pt-[4vw] sm:pt-[1vw]">
                 <div className="flex gap-5 items-center w-fit h-fit ">
                   {data.Name}
 
@@ -119,7 +133,7 @@ const ProjectStructure = () => {
                     key={index}
                     className="w-fit h-fit inline-block overflow-hidden"
                   >
-                    <span className=" ProjectTitleFlow justify-center mr-0.75 items-center w-fit h-fit inline-block translate-y-full ">
+                    <span className=" ProjectTitleFlow justify-center mr-0.75 items-center w-fit h-fit inline-block lg:translate-y-full ">
                       {item}
                     </span>
                   </span>
@@ -134,7 +148,7 @@ const ProjectStructure = () => {
                     key={index}
                     className="w-fit h-fit inline-block justify-center items-center overflow-hidden"
                   >
-                    <span className="ProjectTitleFlow justify-center mr-0.75 items-center w-fit h-fit inline-block translate-y-full ">
+                    <span className="ProjectTitleFlow justify-center mr-0.75 items-center w-fit h-fit inline-block lg:translate-y-full ">
                       {item}
                     </span>
                   </span>
@@ -143,7 +157,7 @@ const ProjectStructure = () => {
             </div>
           </div>
 
-          <div className=" w-[30vw] sm:w-[20vw] h-1 ProjectTextContName opacity-0 bg-[#e2e2e2] rounded-full overflow-hidden">
+          <div className=" w-[30vw] sm:w-[20vw] h-1 ProjectTextContName lg:opacity-0 bg-[#e2e2e2] rounded-full overflow-hidden">
             <div className="ProjectProgressWidth w-0 h-full BgColorSec" />
           </div>
         </div>
