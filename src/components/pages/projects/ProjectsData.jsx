@@ -4,7 +4,25 @@ const ProjectData =[
         OuterImg:`/images/project_images/img1.webp`,
         Name:'Nova Studio',
         Shape:'aspect-square',
-        Project:[]
+        Project:[
+            {
+                id:1,
+                URL:`/images/project_images/img1.webp`,
+            },
+            {
+                id:2,
+                URL:`/images/project_images/img2.webp`,
+            },
+            {
+                id:3,
+                URL:`/images/project_images/img3.webp`,
+            },
+            {
+                id:4,
+                URL:`/images/project_images/img4.webp`,
+            },
+
+        ]
     },
     {
         id:'02',
