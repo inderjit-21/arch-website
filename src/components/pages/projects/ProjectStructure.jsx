@@ -5,11 +5,14 @@ import { HiArrowTurnDownLeft } from "react-icons/hi2";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 gsap.registerPlugin(ScrollTrigger);
 
 const ProjectStructure = () => {
   const ProjectMainCont = useRef();
   const ProjectWrapContainer = useRef();
+
+  const router = useRouter();
 
   useEffect(() => {
     const calculateAndAnimate = () => {
@@ -91,6 +94,10 @@ const ProjectStructure = () => {
     };
   }, []);
 
+  const SendIndexOnURL = (index) => {
+    router.push(`/open-project/${index}`);
+  }
+
   return (
     <div
       ref={ProjectMainCont}
@@ -102,8 +109,9 @@ const ProjectStructure = () => {
           className="w-fit h-fit flex items-start gap-5 pt-[12vh] sm:pt-[7vh]"
         >
           {ProjectData.map((data, index) => (
-            <div key={index} className="w-fit h-fit">
+            <div onClick={()=>SendIndexOnURL(index)} key={index} className="w-fit h-fit">
               <div
+
                 className={` w-[90vw]  md:w-[45vw] lg:w-[25vw] shrink-0 overflow-hidden ProjectImgCont ${data.Shape}`}
               >
                 <img

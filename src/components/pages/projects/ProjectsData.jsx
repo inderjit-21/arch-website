@@ -29,56 +29,178 @@ const ProjectData =[
         OuterImg:`/images/project_images/img2.webp`,
         Name:'Velora Agency',
         Shape:'aspect-[4/3]',
-        Project:[]
+        Project:[
+            {
+                id:1,
+                URL:`/images/project_images/img2.webp`,
+            },
+            {
+                id:2,
+                URL:`/images/project_images/img1.webp`,
+            },
+            {
+                id:3,
+                URL:`/images/project_images/img4.webp`,
+            },
+        ]
     },
     {
         id:'03',
         OuterImg:`/images/project_images/img3.webp`,
         Name:'Aether Labs',
         Shape:'aspect-square',
-        Project:[]
+        Project:[
+            
+            {
+                id:2,
+                URL:`/images/project_images/img7.webp`,
+            },
+            {
+                id:3,
+                URL:`/images/project_images/img5.webp`,
+            },
+            {
+                id:4,
+                URL:`/images/project_images/img6.webp`,
+            },
+        ]
     },
     {
         id:'04',
         OuterImg:`/images/project_images/img4.webp`,
         Name:'Lunex Motion',
         Shape:'aspect-[4/3]',
-        Project:[]
+        Project:[
+            {
+                id:1,
+                URL:`/images/project_images/img8.webp`,
+            },
+            {
+                id:2,
+                URL:`/images/project_images/img2.webp`,
+            },
+            {
+                id:3,
+                URL:`/images/project_images/img9.webp`,
+            },
+            {
+                id:4,
+                URL:`/images/project_images/img4.webp`,
+            },
+        ]
     },
     {
         id:'05',
         OuterImg:`/images/project_images/img5.webp`,
         Name:'Obsidian Works',
         Shape:'aspect-square',
-        Project:[]
+        Project:[
+            {
+                id:1,
+                URL:`/images/project_images/img5.webp`,
+            },
+            {
+                id:2,
+                URL:`/images/project_images/img6.webp`,
+            },
+            {
+                id:3,
+                URL:`/images/project_images/img7.webp`,
+            },
+            {
+                id:4,
+                URL:`/images/project_images/img8.webp`,
+            },
+        ]
     },
     {
         id:'06',
         OuterImg:`/images/project_images/img6.webp`,
         Name:'Pixel Drift',
         Shape:'aspect-[4/3]',
-        Project:[]
+        Project:[
+            {
+                id:1,
+                URL:`/images/project_images/img8.webp`,
+            },
+            {
+                id:2,
+                URL:`/images/project_images/img1.webp`,
+            },
+            {
+                id:3,
+                URL:`/images/project_images/img2.webp`,
+            },
+            {
+                id:4,
+                URL:`/images/project_images/img9.webp`,
+            },
+        ]
     },
     {
         id:'07',
         OuterImg:`/images/project_images/img7.webp`,
         Name:'Neuro Space',
         Shape:'aspect-square',
-        Project:[]
+        Project:[
+            {
+                id:1,
+                URL:`/images/project_images/img9.webp`,
+            },
+            {
+                id:2,
+                URL:`/images/project_images/img2.webp`,
+            },
+            {
+                id:3,
+                URL:`/images/project_images/img6.webp`,
+            },
+            {
+                id:4,
+                URL:`/images/project_images/img4.webp`,
+            },
+        ]
     },
     {
         id:'08',
         OuterImg:`/images/project_images/img8.webp`,
         Name:'Zenith Creative',
         Shape:'aspect-[4/3]',
-        Project:[]
+        Project:[
+            {
+                id:1,
+                URL:`/images/project_images/img9.webp`,
+            },
+            {
+                id:2,
+                URL:`/images/project_images/img3.webp`,
+            },
+            
+        ]
     },
     {
         id:'09',
         OuterImg:`/images/project_images/img9.webp`,
         Name:'Mirage Digital',
         Shape:'aspect-square',
-        Project:[]
+        Project:[
+            {
+                id:1,
+                URL:`/images/project_images/img3.webp`,
+            },
+            {
+                id:2,
+                URL:`/images/project_images/img5.webp`,
+            },
+            {
+                id:3,
+                URL:`/images/project_images/img7.webp`,
+            },
+            {
+                id:4,
+                URL:`/images/project_images/img8.webp`,
+            },
+        ]
     },
 ]
 
