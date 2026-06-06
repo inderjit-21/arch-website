@@ -105,7 +105,7 @@ const OpenProject = () => {
         return (
           <div
             key={index}
-            className="w-full h-svh CoverOpenProjectDiv overflow-hidden will-change-transform"
+            className="w-full h-svh CoverOpenProjectDiv OpenProjectImgCont overflow-hidden will-change-transform"
           >
             <img
               ref={(el) => (containerRef.current[index] = el)}

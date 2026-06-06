@@ -1,3 +1,4 @@
+
 export const FragmentShader = `
 uniform sampler2D uTexture;
 
@@ -141,3 +142,4 @@ void main() {
         modelViewMatrix *
         vec4(pos, 1.0);
 }`;
+
